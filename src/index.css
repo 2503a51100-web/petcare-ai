@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest: #164E43;
+    --color-emerald: #19A58C;
+    --color-coral: #FF9478;
+    --color-ivory: #F8FAF7;
+    --color-charcoal: #25342F;
+    --color-sage: #E8F1EC;
+  }
+
+  body {
+    background-color: #F8FAF7;
+    color: #25342F;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F8FAF7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #BDDFD6;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #19A58C;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(232, 241, 236, 0.9);
+  }
+
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(232, 241, 236, 0.8);
+  }
+
+  .glass-dark {
+    background: rgba(22, 78, 67, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Subtle button pulse & glow effects */
+.btn-primary-glow {
+  box-shadow: 0 4px 14px 0 rgba(22, 78, 67, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-primary-glow:hover {
+  box-shadow: 0 6px 20px rgba(22, 78, 67, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-coral-glow {
+  box-shadow: 0 4px 14px 0 rgba(255, 148, 120, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-coral-glow:hover {
+  box-shadow: 0 6px 20px rgba(255, 148, 120, 0.45);
+  transform: translateY(-1px);
+}
+
+.card-hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -4px rgba(22, 78, 67, 0.1);
+}
